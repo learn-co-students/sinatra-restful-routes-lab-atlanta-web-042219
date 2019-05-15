@@ -1,0 +1,17 @@
+<h2>Updating "<%= @recipe.name %>"</h2>
+
+<form method="POST" action="/recipes/<%= @recipe.id %>">
+	<input type="hidden" name="_method" value="PATCH">
+
+	<input name="name" placeholder="Name" value="<%= @recipe.name %>"/><br><br>
+
+	<input name="cook_time" placeholder="Cook Time" value="<%= @recipe.cook_time %>"/><br><br>
+
+	<textarea name="ingredients" placeholder="Ingredients"><%= @recipe.ingredients %></textarea><br><br>
+
+	<input type="submit" value="Update"/>
+</form>
+
+<form method="GET" action="/recipes">
+	<!-- <input type="submit" value="Home"> -->
+</form>

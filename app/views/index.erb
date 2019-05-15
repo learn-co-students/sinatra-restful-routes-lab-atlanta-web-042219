@@ -1,0 +1,9 @@
+<h1>My Recipes!</h1>
+<ul>
+	<% Recipe.all.each do |r| %>
+		<h3><li><a href="/recipes/<%= r.id %>"><%= r.name %></a></li></h3>
+	<% end %>
+</ul>
+<form method="GET" action="/recipes/new">
+	<input type="submit" value="new">
+</form>
