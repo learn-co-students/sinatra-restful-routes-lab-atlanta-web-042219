@@ -1,0 +1,23 @@
+<style>
+	form {display: inline;}
+</style>
+
+<h1>"<%= @recipe.name %>"</h1>
+<h3>Cook Time: <%= @recipe.cook_time %></h3>
+<h3>Ingredients: <%= @recipe.ingredients %></h3>
+<br><br>
+
+<!-- <form method="GET" action="/recipes/<%= @recipe.id %>/edit">
+	<input type="submit" value="Update"/>
+</form> -->
+<a href="/recipes/<%= @recipe.id %>/edit">Update</a>
+
+<form method="POST" action="/recipes/<%= @recipe.id %>">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="delete"/>
+</form>
+
+<!-- <form method="GET" action="/recipes">
+	<input type="submit" value="Home">
+</form> -->
+<a href="/recipes">Home</a>
